@@ -5,7 +5,7 @@ import ButtonSwitch, { handleClick } from './buttonSwitch';
 function A() {
   const [flag, setFlag] = useState(true);
   const con = useContext(ButtonContext);
-  
+
   const handleClick = () => {
     setFlag(!flag);
   };
