@@ -1,16 +1,17 @@
 import React, { useContext, useState } from 'react';
 import ButtonContext from './ButtonContext';
+import ButtonSwitch from './buttonSwitch';
 
-export default function A() {
-  const [flag, setFlag] = useState(true);
+ function A() {
   const con = useContext(ButtonContext);
-  const handleClick = () => {
-    setFlag(!flag);
-  };
+  
+
   return (
     <div>
-      {flag && <h3>I am A</h3>}
-      <button onClick={handleClick}>A {con.text}</button>
+      <h3>I am A</h3>
+      <button >A {con.text}</button>
     </div>
   );
 }
+
+export default ButtonSwitch(A)
