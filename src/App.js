@@ -12,7 +12,7 @@ export default function App() {
       <h1>I am learning react</h1>
       <ButtonContext.Provider value={{ text }}>
         <A />
-        <B />
+        <B/>
         <C />
       </ButtonContext.Provider>
     </div>

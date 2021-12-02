@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import ButtonContext from './ButtonContext';
-import ButtonSwitch, { handleClick } from './buttonSwitch';
+import ButtonSwitch from './buttonSwitch';
+
+const childC = () => <h3>I am A ON</h3>;
 
 function A() {
   const [flag, setFlag] = useState(true);
@@ -12,7 +14,7 @@ function A() {
 
   return (
     <div>
-      <ButtonSwitch flag={flag} Component={() => <h3>I am A ON</h3>} />
+      <ButtonSwitch flag={flag} Component={childC} />
       <button onClick={handleClick}>A {con.text}</button>
     </div>
   );
