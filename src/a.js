@@ -8,10 +8,10 @@ import ButtonSwitch from './buttonSwitch';
 
   return (
     <div>
-      <h3>I am A</h3>
+      {ButtonSwitch(<h3>I am A</h3>)}
       <button >A {con.text}</button>
     </div>
   );
 }
 
-export default ButtonSwitch(A)
+export default A
