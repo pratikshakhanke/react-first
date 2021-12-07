@@ -1,16 +1,13 @@
 import React, { useContext, useState } from 'react';
 import ButtonContext from './ButtonContext';
 import ButtonSwitch from './buttonSwitch';
+import useCustomHook from './useCustomHook';
 
 const childC = () => <h3>I am B ON</h3>;
 
 export default function B() {
   const con = useContext(ButtonContext);
-  const [flag, setFlag] = useState(true);
-
-  function handleClick() {
-    setFlag(!flag);
-  }
+  const [flag, handleClick] = useCustomHook(true);
 
   return (
     <div>
