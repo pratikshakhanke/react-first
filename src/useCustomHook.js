@@ -7,7 +7,7 @@ const useCustomHook = (initialVal) => {
     setFlag(!flag);
   };
 
-  return [flag, handleClick];
+  return {flag, handleClick};
 };
 
 export default useCustomHook;

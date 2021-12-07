@@ -3,15 +3,15 @@ import ButtonContext from './ButtonContext';
 import ButtonSwitch from './buttonSwitch';
 import useCustomHook from './useCustomHook';
 
-const childC = () => <h3>I am A ON</h3>;
+const childC = () => <>abc</>;
 
 function A() {
   const con = useContext(ButtonContext);
-  const [flag, handleClick] = useCustomHook(true);
+  const {flag, handleClick} = useCustomHook(true);
 
   return (
     <div>
-      <ButtonSwitch flag={flag} Component={childC} />
+      <ButtonSwitch flag={flag} text={childC} />
       <button onClick={handleClick}>A {con.text}</button>
     </div>
   );
